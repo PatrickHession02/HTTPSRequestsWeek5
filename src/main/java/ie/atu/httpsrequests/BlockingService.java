@@ -1,11 +1,12 @@
 package ie.atu.httpsrequests;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
 public class BlockingService {
-    private final restTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     public BlockingService(RestTemplate restTemplate) {this.restTemplate= restTemplate;}
 
