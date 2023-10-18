@@ -14,6 +14,6 @@ public class HttpsRequestsApplication {
 		SpringApplication.run(HttpsRequestsApplication.class, args);
 	}
 	@Bean
-	public RestTemplate restTemplat() { return new RestTemplate();}
+	public RestTemplate restTemplate() { return new RestTemplate();}
 
 }
