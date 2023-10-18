@@ -19,6 +19,6 @@ public class BlockingController {
             blockingService.fetchDataBlocking();
         }
         long endTime = System.currentTimeMillis();
-        return "Total execution Time: " + (endTime - stratTime) + "ms";
+        return "Total execution Time: " + (endTime - startTime) + "ms";
     }
 }
