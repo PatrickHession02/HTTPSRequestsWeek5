@@ -11,6 +11,12 @@ public class BlockingService {
 
     public String fetchDataBlocking(){
         //delay of 2 seconds simulations
+        try{
+            Thread.sleep(2000);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+        return restTemplate.getForObject("https://jsonplaceholder.typicode.come/todos/1", String.class);
 
     }
 }
