@@ -9,7 +9,7 @@ import java.util.concurrent.CompletableFuture;
 
 @RestController
 public class FeignControlller {
-    @private final FeignService feignService;
+    private final FeignService feignService;
 
     public FeignControlller(FeignService feignService){
         this.feignService = feignService;
@@ -17,7 +17,7 @@ public class FeignControlller {
 
     @GetMapping("/feign")
     public String getFeignData()throws Exception, InterruptedException {
-        long startTime = system.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         List<CompletableFuture<ToDoResponse>> futures = new ArrayList<>();
 
         for(int i = 0; i <10; i++){
