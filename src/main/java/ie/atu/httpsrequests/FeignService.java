@@ -20,4 +20,14 @@ public class FeignService {
         }
         return td;
     }
+    public ToDoResponse FetchDataList(int i){
+        ToDoResponse td = TodoCLient.FetchDataList(i);
+        System.out.println(td);
+        try{
+            Thread.sleep(2000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        return td;
+    }
 }
